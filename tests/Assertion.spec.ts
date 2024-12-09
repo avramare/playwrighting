@@ -4,6 +4,7 @@ test('Assertion Practice', async ({ page }) => {
     await page.goto("https://www.saucedemo.com");
 
     await expect(page.locator('[data-test="login-button"]')).toHaveCount(1);
+    await expect(page.locator('[data-test="login-button-adadada"]')).toHaveCount(1);
     await expect(page.locator('[data-test="login-button"]')).toBeEnabled();
     await expect.soft(page.locator('[data-test="login-button"]')).toBeDisabled();
     // await expect(page.locator('[data-test="login-button"]')).toBeDisabled();
@@ -17,6 +18,5 @@ test('Assertion Practice', async ({ page }) => {
     // expect(5).toBe(5);
     //Not Matchers
     await expect(page.locator('[data-test="login-button"]')).not.toHaveText("Register");
-    await expect(page,"This is custom error message").not.toHaveTitle('Swag Labs');
-
+    await expect(page,"This is custom error message").not.toHaveTitle('Swag Labs');    
 })
