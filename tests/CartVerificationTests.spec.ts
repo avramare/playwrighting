@@ -4,7 +4,7 @@ let page: Page;
 
 test.beforeAll(async ({ browser }) => {
     page = await browser.newPage()
-    //login
+    // login
     await page.goto('https:www.saucedemo.com/');
     await page.locator('[data-test="username"]').fill("standard_user");
     await page.locator('[data-test="password"]').fill("secret_sauce");
@@ -12,7 +12,7 @@ test.beforeAll(async ({ browser }) => {
 })
 
 test.afterAll(async ({ }) => {
-    //logout
+    // logout
     await page.getByRole('button', { name: 'Open Menu' }).click();
     await page.getByRole('link', { name: 'Logout' }).click();
 })
@@ -22,7 +22,7 @@ test.afterAll(async ({ }) => {
 test('Adding item to cart verification', async ({ }) => {
 
 
-    //adding and remoing item from cart
+    // adding and remoing item from cart
     await page.getByText("Sauce Labs Backpack").click();
     await page.locator('[data-test="add-to-cart"]').click();
     await page.locator('.shopping_cart_link').click();
@@ -36,7 +36,7 @@ test('Adding item to cart verification', async ({ }) => {
 
 test('Empty cart verification', async ({ }) => {
 
-    //checking empty cart
+    // checking empty cart
     await page.locator('.shopping_cart_link').click();
     await expect(page.locator('.inventory_item_name')).not.toBeVisible();
 
