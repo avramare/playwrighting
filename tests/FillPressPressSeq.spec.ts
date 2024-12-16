@@ -21,8 +21,8 @@ test('Fill press and pressSeq practice', async ({ page }) => {
     // await page.locator("#APjFqb").press("Backspace");
 
     // arrow down + enter
-    await page.locator("#APjFqb").press("ArrowDown+ArrowDown+ArrowDown")
-    await page.locator("#APjFqb").press("Enter")
+    // await page.locator("#APjFqb").press("ArrowDown+ArrowDown+ArrowDown")
+    // await page.locator("#APjFqb").press("Enter")
     
     
     // pressSeq with delay
