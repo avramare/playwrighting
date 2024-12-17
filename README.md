@@ -14,17 +14,12 @@ This project is sandbox for exploring the powerful capabilities of Playwright, p
 
 ## ✨ Features
 
-### 🔬 Comprehensive Test Scenarios
+### 🧪 Comprehensive Test Scenarios
 - Cross-browser testing (Chromium, Firefox, WebKit)
 - Complex user interaction simulations
 - Performance and load testing mockups
 - Cutting-edge web automation techniques
-
-### 🧪 Testing Highlights
-- Page object model implementations
-- Dynamic test data generation
-- Advanced selector strategies
-- Mocking and intercepting network requests
+- Collection of tests from our laboratory
 
 ## 🚀 Quick Start &  Installation will be added soon
 
