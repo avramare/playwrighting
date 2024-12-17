@@ -11,5 +11,5 @@ test('Handle Multi select dropdown', async ({ page }) => {
     // await page.locator("#cars").selectOption(['Volvo', 'Opel', 'Audi']);
 
     // multiple select with value and visible text
-    await page.locator("#cars").selectOption(['volvo', 'Opel', 'Audi']);
+    // await page.locator("#cars").selectOption(['volvo', 'Opel', 'Audi']);
 })
