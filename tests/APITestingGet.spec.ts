@@ -50,5 +50,33 @@ test('API testing GET practice 4', async ({ request }) => {
 
     const response = await request.get("/booking");
     console.log(await response.json());
+})
+
+// 5. Get call with path parameter
+test('API testing GET practice 5', async ({ request }) => {
+
+    const response = await request.get("/booking/895");
+    console.log(await response.json());
+
+})
+
+// 6. Get call with query parameter
+test('API testing GET practice 6', async ({ request }) => {
+
+    const response = await request.get("/booking/?firstname=john&lastname=smith");
+    console.log(await response.json());
+
+})
+
+// 7. Get call with query parameter
+test('API testing GET practice 7', async ({ request }) => {
+
+    const response = await request.get("/booking", {
+        params: {
+            firstname: "John",
+            lastname: "Smith"
+        }
+    });
+    console.log(await response.json());
 
 })
