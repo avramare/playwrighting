@@ -1,4 +1,5 @@
-import { test, request } from "@playwright/test";
+import { test, request, expect } from "@playwright/test";
+import { json } from "stream/consumers";
 
 // 3. baseURL before all, new Context, extraHTTPHeaders
 let reqContext2
@@ -79,4 +80,37 @@ test('API testing GET practice 7', async ({ request }) => {
     });
     console.log(await response.json());
 
+})
+
+// 8. Assertions on API response : response.status()).toBe(200)
+test('API testing GET practice 8', async ({ request }) => {
+
+    const response = await request.get("/booking/240");
+    console.log(await response.json());
+    expect(response.status()).toBe(200);
+})
+// 8.1 response.ok()).toBeTruthy()
+test('API testing GET practice 8.1', async ({ request }) => {
+
+    const response = await request.get("/booking/240");
+    console.log(await response.json());
+    expect(response.ok()).toBeTruthy();
+})
+// 8.2 response.json()).toMatchObject
+test('API testing GET practice 8.2', async ({ request }) => {
+
+    const response = await request.get("/booking/2838");
+    console.log(await response.json());
+    expect(await response.json()).toMatchObject({
+        firstname: 'Josh',
+        lastname: 'Allen',
+        totalprice: 111,
+        depositpaid: true,
+        bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+        additionalneeds: 'super bowls'
+    });
+
+    // response.toEqual()
+    const jsonResponse = await response.json()
+    expect(jsonResponse.firstname).toEqual("Josh")
 })
