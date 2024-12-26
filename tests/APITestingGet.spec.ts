@@ -114,3 +114,13 @@ test('API testing GET practice 8.2', async ({ request }) => {
     const jsonResponse = await response.json()
     expect(jsonResponse.firstname).toEqual("Josh")
 })
+
+// 9. Validate UI response against UI
+test('API with UI verification', async ({ request, page }) => {
+    const response2 = await request.get("https://api.demoblaze.com/entries")
+    const jsonResponse2 = await response2.json();
+    console.log(jsonResponse2.Items[0].title);
+    await page.goto("https://www.demoblaze.com/");
+    expect(page.getByRole('link', { name: 'Samsung galaxy s6' })).toHaveText(jsonResponse2.Items[0].title);        
+})
+
