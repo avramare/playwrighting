@@ -91,9 +91,18 @@ test('API testing Post call 4', async ({ request }) => {
         depositpaid: true,
         bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
         additionalneeds: 'Breakfast'
-      });
-    
-    // additional assertion
-    expect(jsonResponse.booking.additionalneeds).toEqual("Breakfast")  
+    });
 
+    // additional assertion
+    expect(jsonResponse.booking.additionalneeds).toEqual("Breakfast")
+
+})
+
+// Testing API with UI verification
+test('API with UI verification', async ({ request }) => {
+    const response = await request.post("https://api.demoblaze.com/addtocart", {
+        data: {"id":"2cb2aa3e-ad3c-fe4d-262e-c79c0225666d","cookie":"user=82bbab5e-8c2a-9450-9d3f-de2936ccc6cd","prod_id":3,"flag":false}
+    })
+
+    expect(response.status()).toBe(200);
 })
