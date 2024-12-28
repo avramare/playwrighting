@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-// 1. passing header and body, status code assertion
+// 1. passing header and body, status() assertion
 test('API testing Put call 1', async ({ request }) => {
 
     const response = await request.put("/booking/1", {
@@ -26,7 +26,7 @@ test('API testing Put call 1', async ({ request }) => {
     expect(response.status()).toBe(200);
 });
 
-// 2. passing header and body, statusText assertion
+// 2. passing header and body, statusText() assertion
 test('API testing Put call 2', async ({ request }) => {
 
     const response = await request.put("/booking/1", {
@@ -52,7 +52,7 @@ test('API testing Put call 2', async ({ request }) => {
     expect(response.statusText()).toBe("OK");
 });
 
-// 3. passing header and body, toBeTruthy assertion
+// 3. passing header and body, toBeTruthy() assertion
 test('API testing Put call 3', async ({ request }) => {
 
     const response = await request.put("/booking/1", {
@@ -78,7 +78,7 @@ test('API testing Put call 3', async ({ request }) => {
     expect(response.ok()).toBeTruthy();
 });
 
-// 4. passing header and body, toMantchObject assertion
+// 4. passing header and body, toMantchObject() assertion
 test('API testing Put call 4', async ({ request }) => {
 
     const response = await request.put("/booking/1", {
@@ -113,7 +113,7 @@ test('API testing Put call 4', async ({ request }) => {
         "additionalneeds": "Breakfast"
     });
 
-    // additional assertion wih to Equal
+    // additional assertion wiht toEqual()
     expect(responseJson.additionalneeds).toEqual("Breakfast");
 
 
