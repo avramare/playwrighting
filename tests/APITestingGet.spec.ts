@@ -1,5 +1,4 @@
 import { test, request, expect } from "@playwright/test";
-import { json } from "stream/consumers";
 
 // 3. baseURL before all, new Context, extraHTTPHeaders
 let reqContext2
