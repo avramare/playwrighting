@@ -12,7 +12,7 @@ test('API Testing Delete call', async ({ request }) => {
 })
 
 
-test('API Testing Get call after Delete to get 404', async ({ request }) => {
+test('API Testing - Get call after Delete to get 404', async ({ request }) => {
 
     // const response = await request.delete("/booking/2");
     // expect(response.status()).toBe(201);
