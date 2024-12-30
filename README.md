@@ -6,7 +6,7 @@ Welcome to the ultimate Playwright testing playground – a crafted laboratory f
 
 This project is sandbox for exploring the powerful capabilities of Playwright, pushing the boundaries of browser automation, and writing test scripts that are both robust and elegant.
 
- Comprehensive testing scenarios and solutions build straight from out  [laboratory](https://github.com/avramare/playwriting/tree/dev2/laboratory) 
+ Comprehensive testing scenarios and solutions build straight from our  [laboratory](https://github.com/avramare/playwriting/tree/dev2/laboratory) 
 
 ## 🛠 Tech Arsenal
 
