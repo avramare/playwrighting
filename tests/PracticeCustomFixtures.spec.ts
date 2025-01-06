@@ -1,4 +1,4 @@
-import { test } from "./MyCustomFixtures";
+import { test } from "../fixtures/CustomFixtures.js";
 
 test('Practice test 1', async ({ fixture1, workerFixture1 }) => {
     console.log(fixture1);

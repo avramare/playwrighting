@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage.js";
 import { HomePage } from "../pages/HomePage.js";
-import { CartPage } from "../pages/CartPage";
+import { CartPage } from "../pages/CartPage.js";
 
 test('Cart verification', async ({ page }) => {
     // login
