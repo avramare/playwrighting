@@ -27,6 +27,6 @@ export const test = baseTest.extend<MyFixtures, MyWorkersFixtures>({
         console.log("Before part of workerFixture1");
         await use(workerFixture1);
         console.log("After part of workerFixture1");
-    }, {scope:"worker"}]
+    }, { scope: "worker" }]
 
 })
