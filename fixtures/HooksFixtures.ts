@@ -10,7 +10,7 @@ export const test = baseTest.extend<MyHooksFixtures>({
     loginLogutFixture: async ({ page }, use) => {
         const loginLogutFixture = undefined;
         // login
-        await page.goto('https:www.saucedemo.com/');
+        await page.goto("https://www.saucedemo.com/");
         await page.locator('[data-test="username"]').fill("standard_user");
         await page.locator('[data-test="password"]').fill("secret_sauce");
         await page.locator('[data-test="login-button"]').click();
