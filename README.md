@@ -21,6 +21,8 @@ This project is sandbox for exploring the powerful capabilities of Playwright, p
 - Complex user interaction simulations
 - Performance and load testing mockups
 - Cutting-edge web automation techniques
+- Page Object Models testing design patter
+- Custom Fixtures
 - API Testing
 - Collection of tests from our laboratory
 
