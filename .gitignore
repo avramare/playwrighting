@@ -1,5 +1,28 @@
+# Dependencies
 node_modules/
+
+# Testing
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/reports/
+/allure-results/
+/test-results/
+/screenshots/
+/videos/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS
+.DS_Store
+Thumbs.db
